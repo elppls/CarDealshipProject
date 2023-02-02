@@ -1,0 +1,275 @@
+<style>
+.main
+{
+background:url(images/cover.jpg)  no-repeat center center fixed; 
+background-size:cover;
+height:150vh;
+
+
+}
+#Odyssey,#Sienna,#Sprinter
+{
+display:none;
+
+}
+.InfoIcon{
+display:flex;
+position:absolute;
+bottom:50px;
+}
+.InfoIcon p{
+color:#3492eb;
+font-family:Fantasy;
+}
+.CarInfoText
+{
+max-width:500px;
+margin-top:100px;
+margin-left:70px;
+}
+.CarInfoText h1
+{
+font-size:65px;
+}
+.CarInfoText p{
+max-width:450px;
+font-size:18px;
+font-weight:270;
+line-height:20px;
+margin: 40px 0;
+}
+.InfoIcon div
+{
+display:flex;
+align-items:center;
+margin-right:60px;
+}
+.InfoIcon img{
+width:50px;
+height:50px;
+}
+#SiennaPic,#SprinterPic,#OdysseyPic
+{
+width:55%;
+position:absolute;
+right:70px;
+bottom:60px;
+}
+</style>
+<script>
+function passValues(n)
+{
+if(n==1)
+{
+var TheColor=document.getElementById("ColorsSienna").value;
+var TheBrand=document.getElementById("Sienna").getAttribute("value");
+var ThePrice=document.getElementById("SiennaPrice").getAttribute("value");
+}
+else if(n==2)
+{
+var TheColor=document.getElementById("ColorsOdyssey").value;
+var TheBrand=document.getElementById("Odyssey").getAttribute("value");
+var ThePrice=document.getElementById("OdysseyPrice").getAttribute("value");
+}
+else if(n==3)
+{
+var TheColor=document.getElementById("ColorsSprinter").value;
+var TheBrand=document.getElementById("Sprinter").getAttribute("value");
+var ThePrice=document.getElementById("SprinterPrice").getAttribute("value");
+}
+ 
+localStorage.setItem("Colors",TheColor);
+localStorage.setItem("Brands",TheBrand);
+localStorage.setItem("Prices",ThePrice);
+return false;
+}
+
+function HideAndShow(m) {
+  var x = document.getElementById("BigContainer");
+  if(m==1)
+  {
+  var y=document.getElementById("Odyssey");
+  }
+  else if(m==2)
+  {
+  var y=document.getElementById("Sienna");
+  }
+  else if(m==3)
+  {
+  var y=document.getElementById("Sprinter");
+  }
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  y.style.display = "block";
+}
+
+  function showDivs(Color,Brand,x) {
+	  var Brand=document.getElementById(Brand);
+	  var Color=document.getElementById(Color);
+	  var temp=x;
+	  var imgg=document.getElementById(x);
+	  var textBrand=Brand.value;
+	  var textColor=Color.value;
+	  var dirr="images/";
+	  imgg.src = dirr+textBrand+textColor +'.png'
+}
+
+</script
+<html>
+
+<head>
+<link rel="stylesheet" href="StyleProject.css">
+</head>
+
+<body>
+
+<div class="main">
+
+	
+		<div class="navigationBar">
+		
+				<img src="images/Logo.png" alt="Logo" id="TheLogo"> 
+			
+				 
+				 <a href="#Contact">Contact us</a>
+				 <a href="Models.html">Models</a>
+				 <a href="Home.html">Home</a>
+		
+		</div>
+	
+
+<table id="BigContainer">
+<tr>
+
+<td>
+<div class="Container" name="Container" value="Odyssey" >
+<img src="images/OdysseyBlue.png" alt="OdysseyPic" onclick="HideAndShow(1)">
+<div class="Caption">Honda Odyssey</div>
+</div>
+</td>
+ <td>
+<div class="Container" name="Container" value="Sienna">
+<img src="images/SiennaBlue.png" alt="MiniPic" onclick="HideAndShow(2)">
+<div class="Caption">Toyota Sienna</div>
+</div>
+</td>
+ <td>
+<div class="Container" name="Container" value="Sprinter">
+<img src="images/SprinterBlue.png" alt="UrusPic" onclick="HideAndShow(3)">
+<div class="Caption">Mercedes Sprinter</div>
+</div>
+</td>
+</tr>
+ <td>
+
+</tr>
+
+<div class="Odyssey" id="Odyssey" value="Honda-Odyssey">
+
+<div class="CarInfoText">
+<h1>Honda Odyssey</h1>
+<p>
+The 2021 Honda Odyssey provides an impressive amount of cargo space. Behind the third-row seats, you get up to 38.6 cubic feet of storage space, and it's easy to lift in heavy items over its low load floor.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/OdysseyBlue.png" id="OdysseyPic" name="OdysseyPic" alt="OdysseyPic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>280 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="horsepower"><p>262 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="horsepower"><p>180 km/h </p> </div>
+<div id="OdysseyPrice" value="$33,300"> <img src="images/price-icon.png" id="price-icon" alt="horsepower"><p>$33,300 </p> </div>
+
+
+<select id="ColorsOdyssey" name="ColorsOdyssey" >
+<option value="">Color</option>
+<option value="Silver">Silver</option>
+<option value="White">White</option>
+<option value="Blue">Blue</option>
+</select>
+<button type="button" id="BrandOdyssey" name="BrandOdyssey" value="Odyssey" onclick="showDivs('ColorsOdyssey',this.id,'OdysseyPic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(2)" />
+</form>
+</div>
+</div>
+
+<div class="Sienna" id="Sienna" value="Toyota-Sienna">
+
+<div class="CarInfoText">
+<h1>Toyota Sienna</h1>
+<p>
+The 2021 Toyota Sienna ranks near the top of the minivan class. The redesigned Sienna offers roomy seating, many safety features, excellent fuel economy, and a good predicted reliability rating.
+
+<img class="ThePictures"  src="images/SiennaBlue.png" id="SiennaPic" name="SiennaPic" alt="SiennaPic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>296 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="horsepower"><p>263 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="horsepower"><p>185 km/h </p> </div>
+<div id="SiennaPrice" value="$37,265"> <img src="images/price-icon.png" id="price-icon" alt="horsepower"><p>$37,265 </p> </div>
+
+
+<select id="ColorsSienna" name="ColorsSienna" >
+<option value="">Color</option>
+<option value="Blue">Blue</option>
+<option value="Red">Red</option>
+<option value="Black">Black</option>
+
+</select>
+
+<button type="button" id="BrandSienna" name="BrandSienna" value="Sienna" onclick="showDivs('ColorsSienna',this.id,'SiennaPic')" >Preview</button>
+<form action="Order.html">
+<input type="submit" value="Click" onclick="passValues(1)" />
+</form>
+</div>
+</div>
+</div>
+
+
+<div class="Sprinter" id="Sprinter" value="Mercedes-Sprinter">
+
+<div class="CarInfoText">
+<h1>Mercedes Sprinter </h1>
+<p>
+The Mercedes-Benz Sprinter is a light commercial vehicle (van) built by Daimler AG of Stuttgart, Germany as a large van, chassis cab, minibus, and pickup truck.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/SprinterBlue.png" id="SprinterPic" name="SprinterPic" alt="SprinterPic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>188 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="horsepower"><p>325 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="horsepower"><p>170 km/h </p> </div>
+<div id="SprinterPrice" value="$35,700" > <img src="images/price-icon.png" id="price-icon" alt="horsepower"><p>$35,700 </p> </div>
+
+
+<select id="ColorsSprinter" name="ColorsSprinter" >
+<option value="">Color</option>
+<option value="Blue">Blue</option>
+<option value="Black">Black</option>
+<option value="Red">Red</option>
+
+</select>
+<button type="button" id="BrandsSprinter" name="BrandsSprinter" value="Sprinter" onclick="showDivs('ColorsSprinter',this.id,'SprinterPic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(2)" />
+</form>
+</div>
+</div>
+
+
+
+</table>
+
+</body>
+
+</html>

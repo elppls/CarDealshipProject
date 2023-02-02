@@ -1,0 +1,152 @@
+<style>
+.main{
+
+background:url(images/cover.jpg)  no-repeat center center fixed; 
+background-size:cover;
+height:150vh;
+ }
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+caption{
+font-weight:bold;
+}
+
+ td,  th {
+
+  padding: 8px;
+  font-weight:bold;
+}
+
+
+
+ tr:hover {
+background-color: #ddd;
+}
+
+ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: ;
+ 
+}
+#subbutton
+{
+width:100%;
+height:50px;
+}
+</style>
+<html>
+  <head>
+<link rel="stylesheet" href="StyleProject.css">
+ 
+    <title> Car Sale </title>
+  </head>
+  <body>
+  <div class="main">
+	<div class="main">
+	
+		<div class="navigationBar">
+		
+				<img src="images/Logo.png" alt="Logo" id="TheLogo"> 
+			
+				 
+				 <a href="#Contact">Contact us</a>
+				 <a href="Models.html">Models</a>
+				 <a href="Home.html">Home</a>
+		
+		</div>
+	
+ 
+    <form action = "http://localhost/CompleteOrder.php"
+          method = "post">
+      <h2> Welcome to our dealership </h2>
+ 
+      <table>
+ 
+ 
+        <tr>
+          <td> First Name: </td>
+          <td> <input type = "text" name = "fname" size = "30" required /></td>
+        </tr>
+		<tr>
+          <td> Last Name: </td>
+          <td> <input type = "text" name = "lname" size = "30" required /></td>
+        </tr>
+		 <tr>
+          <td> City: </td>
+          <td> <input type = "text" name = "city" size = "30" required /></td>
+        </tr>
+        <tr>
+          <td> Street Address: </td>
+          <td> <input type = "text" name = "Street" size = "30" required /></td>
+        </tr>
+        <tr>
+          <td> Email: </td>
+          <td> <input type = "text" name = "Email" size = "30" required /></td>
+        </tr>
+		<tr>
+          <td> Mobile: </td>
+          <td> <input type = "number" name = "Mobile" size = "30" required /></td>
+        </tr>
+      </table>
+      <p />
+	  <h3> Payment Method </h3>
+      <p>
+        <input type = "radio" name = "payment" value = "visa"
+              checked = "checked" />
+          Visa <br />
+        <input type = "radio" name = "payment" value = "master-card" />
+          Master Card <br />
+      
+        <input type = "radio" name = "payment" value = "check" />
+          Check <br /> <br />
+ 
+
+ </p>
+      <table>
+	  
+ 
+        <tr>
+          <th> Product </th>
+          <th> Color </th>
+          
+        </tr>
+ 
+
+ 
+        <tr>
+          <td> Color: </td>
+          <td > <input type = "text" id="Color" name="Color" readonly /></td>
+        </tr>
+            <tr>
+          <td> Brand </td>
+          <td > <input type = "text" id="Brand" name="Brand" readonly /></td>
+        </tr>
+              <tr>
+          <td> Price </td>
+          <td > <input type = "text" id="Price" name="Price" readonly /></td>
+        </tr>
+        
+        
+      </table>
+      <p />
+  
+        <input type = "submit" value = "Submit Order" id="subbutton" />
+        
+      
+      
+    </form>
+	<script>
+
+document.getElementById("Color").value=localStorage.getItem("Colors");
+document.getElementById("Brand").value=localStorage.getItem("Brands");
+document.getElementById("Price").value=localStorage.getItem("Prices");
+
+
+</script>
+  </body>
+</html>

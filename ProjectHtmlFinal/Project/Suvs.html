@@ -1,0 +1,277 @@
+<style>
+.main
+{
+background:url(images/cover.jpg)  no-repeat center center fixed; 
+background-size:cover;
+height:150vh;
+
+
+}
+#X7,#Cayenne,#Urus
+{
+display:none;
+
+}
+.InfoIcon{
+display:flex;
+position:absolute;
+bottom:50px;
+}
+.InfoIcon p{
+color:#3492eb;
+font-family:Fantasy;
+}
+.CarInfoText
+{
+max-width:500px;
+margin-top:100px;
+margin-left:70px;
+}
+.CarInfoText h1
+{
+font-size:65px;
+}
+.CarInfoText p{
+max-width:450px;
+font-size:18px;
+font-weight:270;
+line-height:20px;
+margin: 40px 0;
+}
+.InfoIcon div
+{
+display:flex;
+align-items:center;
+margin-right:60px;
+}
+.InfoIcon img{
+width:50px;
+height:50px;
+}
+#X7Pic,#CayennePic,#UrusPic
+{
+width:55%;
+position:absolute;
+right:70px;
+bottom:60px;
+}
+</style>
+<script>
+function passValues(n)
+{
+if(n==1)
+{
+var TheColor=document.getElementById("ColorsX7").value;
+var TheBrand=document.getElementById("X7").getAttribute("value");
+var ThePrice=document.getElementById("X7Price").getAttribute("value");
+}
+else if(n==2)
+{
+var TheColor=document.getElementById("ColorsCayenne").value;
+var TheBrand=document.getElementById("Cayenne").getAttribute("value");
+var ThePrice=document.getElementById("CayennePrice").getAttribute("value");
+}
+else if(n==3)
+{
+var TheColor=document.getElementById("ColorsUrus").value;
+var TheBrand=document.getElementById("Urus").getAttribute("value");
+var ThePrice=document.getElementById("UrusPrice").getAttribute("value");
+}
+ 
+localStorage.setItem("Colors",TheColor);
+localStorage.setItem("Brands",TheBrand);
+localStorage.setItem("Prices",ThePrice);
+return false;
+}
+function HideAndShow(m) {
+  var x = document.getElementById("BigContainer");
+  if(m==1)
+  {
+  var y=document.getElementById("X7");
+  }
+  else if(m==2)
+  {
+  var y=document.getElementById("Cayenne");
+  }
+  else if(m==3)
+  {
+  var y=document.getElementById("Urus");
+  }
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  y.style.display = "block";
+}
+
+  function showDivs(Color,Brand,x) {
+	  var Brand=document.getElementById(Brand);
+	  var Color=document.getElementById(Color);
+	  var temp=x;
+	  var imgg=document.getElementById(x);
+	  var textBrand=Brand.value;
+	  var textColor=Color.value;
+	  var dirr="images/";
+	  imgg.src = dirr+textBrand+textColor +'.png'
+}
+
+</script
+<html>
+
+<head>
+<link rel="stylesheet" href="StyleProject.css">
+</head>
+
+<body>
+
+<div class="main">
+	
+	
+		<div class="navigationBar">
+		
+				<img src="images/Logo.png" alt="Logo" id="TheLogo"> 
+			
+				 
+				 <a href="Contact.html">Contact us</a>
+				 <a href="Models.html">Models</a>
+				 <a href="Home.html">Home</a>
+		
+		</div>
+	
+
+<table id="BigContainer">
+<tr>
+
+<td>
+<div class="Container" name="Container" value="X7" >
+<img src="images/X7White.png" alt="X7" onclick="HideAndShow(1)">
+<div class="Caption">BMW X7</div>
+</div>
+</td>
+ <td>
+<div class="Container" name="Container" value="Cayenne">
+<img src="images/CayenneWhite.png" alt="CayennePic" onclick="HideAndShow(2)">
+<div class="Caption">Porsche Cayenne</div>
+</div>
+</td>
+ <td>
+<div class="Container" name="Container" value="Urus">
+<img src="images/UrusWhite.png" alt="UrusPic" onclick="HideAndShow(3)">
+<div class="Caption">Lamborghini Urus</div>
+</div>
+</td>
+</tr>
+ <td>
+
+</tr>
+
+<div class="X7" id="X7" value="BMW-X7">
+
+<div class="CarInfoText">
+<h1>BMW X7</h1>
+<p>
+A statement of the luxury class: the new BMW X7 is the elegant fusion of presence and personality. Despite its majestic appearance, it gives an impression of lightness and agility thanks to the puristic design and athletic styling.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/X7White.png" id="X7Pic" name="X7Pic" alt="X7Pic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>336 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="torque-icon"><p>540 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="speed-icon"><p>210 km/h </p> </div>
+<div id="X7Price" value="$74,900"> <img src="images/price-icon.png" id="price-icon" alt="price-icon"><p>$74,900 </p> </div>
+
+
+<select id="ColorsX7" name="ColorsX7" >
+<option value="">Color</option>
+<option value="Blue">Blue</option>
+<option value="White">White</option>
+<option value="Black">Black</option>
+<option value="Purple">Purple</option>
+</select>
+<button type="button" id="BrandX7" name="BrandX7" value="X7" onclick="showDivs('ColorsX7',this.id,'X7Pic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(1)" />
+</form>
+</div>
+</div>
+
+<div class="Cayenne" id="Cayenne" value="Porsche-Cayenne">
+
+<div class="CarInfoText">
+<h1>Porsche Cayenne</h1>
+<p>
+The Cayenne and Cayenne Coupé: both boast a striking appearance and impressive performance, with up to five seats.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/CayenneWhite.png" id="CayennePic" name="CayennePic" alt="CayennePic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>416 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="torque-icon"><p>435 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="speed-icon"><p>295 km/h </p> </div>
+<div id="CayennePrice" value="$75,300"> <img src="images/price-icon.png" id="price-icon" alt="price-icon"><p>$75,300 </p> </div>
+
+
+<select id="ColorsCayenne" name="ColorsCayenne" >
+<option value="">Color</option>
+<option value="Blue">Blue</option>
+<option value="White">White</option>
+<option value="Black">Black</option>
+<option value="Orange">Orange</option>
+</select>
+
+<button type="button" id="BrandsCayenne" name="BrandsCayenne" value="Cayenne" onclick="showDivs('ColorsCayenne',this.id,'CayennePic')" >Preview</button>
+<form action="Order.html">
+<input type="submit" value="Click" onclick="passValues(2)" />
+
+</form>
+</div>
+</div>
+
+
+<div class="Urus" id="Urus" value="Lamborghini-Urus">
+
+<div class="CarInfoText">
+<h1>Lamborghini Urus </h1>
+<p>
+The soul of a super sports car and the functionality of an SUV: Lamborghini Urus is the first Super Sport Utility Vehicle in the world.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/UrusWhite.png" id="UrusPic" name="UrusPic" alt="UrusPic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>740 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="torque-icon"><p>627 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="speed-icon"><p>305 km/h </p> </div>
+<div id="UrusPrice" value="$200,000"> <img src="images/price-icon.png" id="price-icon" alt="price-icon"><p>$200,000 </p> </div>
+
+
+<select id="ColorsUrus" name="ColorsUrus" >
+<option value="">Color</option>
+<option value="Blue">Blue</option>
+<option value="White">White</option>
+<option value="Purple">Purple</option>
+<option value="Yellow">Yellow</option>
+</select>
+<button type="button" id="BrandsUrus" name="BrandsUrus" value="Urus" onclick="showDivs('ColorsUrus',this.id,'UrusPic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(3)" />
+</form>
+</div>
+</div>
+
+
+
+</table>
+
+</body>
+
+</html>

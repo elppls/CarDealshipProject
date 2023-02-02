@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" href="StyleProject.css">
+<style>
+
+.main
+{
+background:url(images/cover.jpg)  no-repeat center center fixed; 
+background-size:cover;
+height:150vh;
+
+
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 40px;
+  cursor:pointer;
+  position:relative;
+
+}
+.column img{
+height:600px;
+
+
+}
+
+.row:hover >.column img:not(:hover) 
+{
+transition: 0.8s ease;
+opacity:0.5;
+
+}
+.CaptionCars{
+opacity:0;
+font-weight:1000;
+color:#D2691E;
+font-size:20px;
+}
+.column:hover .CaptionCars{
+opacity:1;
+ transition: 0.8s ease;
+}
+<script>
+
+</script>
+</style>
+</head>
+<div class="main">
+	
+	
+		<div class="navigationBar">
+		
+				<img src="images/Logo.png" alt="Logo" id="TheLogo"> 
+			
+				 
+				 <a href="Contact.html">Contact us</a>
+				 <a href="Models.html">Models</a>
+				 <a href="Home.html">Home</a>
+		
+		</div>
+<body>
+
+<div class="row">
+  <div class="column">
+   <a href="cars.html"> <img src="images/SportsCars.jpg" id="SportsCars" alt="Snow" style="width:100%"> </a> 
+	<div class="CaptionCars">Sports Cars</div>
+  </div>
+  <div class="column">
+     <a href="vans.html"> <img src="images/Vans.jpg" alt="Vans" id="Vans" style="width:100%" ></a> 
+	<div class="CaptionCars">Vans</div>
+  </div>
+  <div class="column">
+   <a href="ecocars.html"> <img src="images/EcoCars.jpg" alt="EcoCars" id="EcoCars" style="width:100%" ></a>
+	<div class="CaptionCars">Economic Cars</div>
+  </div>  
+  <div class="column">
+   <a href="suvs.html"> <img src="images/Suvs.jpg" alt="Suvs" id="Suvs" style="width:100%" ></a>
+	<div class="CaptionCars">Suvs</div>
+  </div>
+</div>
+
+</body>
+</html>

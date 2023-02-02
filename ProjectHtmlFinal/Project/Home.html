@@ -1,0 +1,153 @@
+<html>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Verdana, sans-serif;
+    }
+    .mymySlides {
+      display: none;
+    }
+    img {
+      vertical-align: middle;
+    }
+    .main {
+      background: url(images/cover1.jpg) no-repeat center center fixed;
+      background-size: cover;
+      height: 150vh;
+    }
+    .navigationBar {
+      height: 70px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    #TheLogo {
+      height: 80px;
+      padding: 10px 80px;
+    }
+    .navigationBar a {
+      color: #f2f2f2;
+      float: right;
+      padding: 23.9px 20px;
+      font-size: 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .navigationBar a:hover {
+      color: black;
+    }
+
+    .welcoming h1 {
+      border-right: solid 3px rgba(0, 255, 0, 0.75);
+      white-space: nowrap;
+      overflow: hidden;
+      font-family: monospace;
+      font-size: 28px;
+      color: #ffdf00;
+      padding-left: 370px;
+    }
+
+    .welcoming h1 {
+      animation: animated-text 4s steps(29, end) 1s 1 normal both,
+        animated-cursor 600ms steps(29, end) infinite;
+    }
+    .welcoming h2 {
+      border-right: solid 3px rgba(0, 255, 0, 0.75);
+      white-space: nowrap;
+      overflow: hidden;
+      font-family: monospace;
+      font-size: 28px;
+      color: #ffdf00;
+      padding-left: 300px;
+    }
+
+    .welcoming h2 {
+      animation: animated-text1 4s steps(29, end) 1s 1 normal both,
+        animated-cursor1 600ms steps(29, end) infinite;
+    }
+
+    .largefont {
+      color: darkred;
+    }
+
+    @keyframes animated-text {
+      from {
+        width: 0;
+      }
+      to {
+        width: 900px;
+      }
+    }
+
+    @keyframes animated-cursor {
+      from {
+        border-right-color: rgba(255, 255, 255);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+    @keyframes animated-text1 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 870px;
+      }
+    }
+
+    @keyframes animated-cursor1 {
+      from {
+        border-right-color: rgba(255, 255, 255);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+    .welcoming ul {
+      padding: 20px;
+      color: #ffdf00;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="navigationBar">
+        <img src="images/Logo.png" alt="Logo" id="TheLogo" />
+
+        <a href="Contact.html">Contact us</a>
+        <a href="Models.html">Models</a>
+        <a href="Home.html">Home</a>
+      </div>
+
+      <div class="welcoming">
+        <h2>
+          WELCOME TO <span class="largefont">BEST </span>CAR DEALER IN TOWN!
+        </h2>
+        <div class="box">
+          <h1>WHAT <span class="largefont">YOU NEED</span> IS EASY FOR US.</h1>
+          <br />
+          <ul>
+            <li>FAST DELIVARY</li>
+            <br /><br />
+            <li>BOOK YOUR TESTDRIVE BY ONE CLICK</li>
+            <br /><br />
+            <li>
+              THE BEST POSTSERVICE IN THE TOWN,AND FREE INSURANCE IN ALL CARS
+            </li>
+            <br /><br />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

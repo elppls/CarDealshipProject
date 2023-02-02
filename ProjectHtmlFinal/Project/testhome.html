@@ -1,0 +1,200 @@
+<html>
+
+
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mymySlides {display: none;}
+img {vertical-align: middle;}
+
+.navigationBar
+{
+height:70px;
+width:100%;
+background-color:rgba(0,0,0,0.0);
+}
+
+#TheLogo
+{
+height:80px;
+padding:10px 80px;
+}
+.navigationBar a {
+  color: #f2f2f2;
+  float:right;
+  padding: 23.9px 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+
+}
+.navigationBar a:hover 
+{
+color: black;
+}
+
+.welcoming h1{
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: monospace;  
+  font-size: 28px;
+  color:#FFDF00;
+  padding-left:0;
+}
+
+
+.welcoming h1{
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+
+}
+.welcoming h2{
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family:monospace;  
+  font-size: 28px;
+  color: 	#FFDF00;
+  padding-left:300px;
+}
+
+
+.welcoming h2{
+  animation: animated-text1 4s steps(29,end) 1s 1 normal both,
+             animated-cursor1 600ms steps(29,end) infinite;
+
+}
+
+.largefont{
+color:darkred;
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width:600px;}
+}
+
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255);}
+  to{border-right-color: transparent;}
+}
+@keyframes animated-text1{
+  from{width: 0;}
+  to{width:870px;}
+}
+
+
+@keyframes animated-cursor1{
+  from{border-right-color: rgba(255,255,255);}
+  to{border-right-color: transparent;}
+}
+.welcoming ul{
+padding-left:400px;
+color:#FFDF00;
+font-weight:bold;
+}
+
+html,body,.box{
+  height:100%;
+  margin:0;
+  padding:0;
+}
+.box{position:relative;}
+.header{
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(images/cover1.jpg);
+  background-size:cover;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.welcoming h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+.welcoming p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.content {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.content p{
+  margin:15px;
+}
+.yet-again{
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(images/cover1.jpg);
+  background-size:cover;
+}
+a, a:visited{
+  color:white;
+  text-decoration:none;
+  background:rgba(255,255,255,0.7);
+  color:black;
+  box-shadow:-5px 0 0 rgba(255,255,255,0.7),5px 0 0 rgba(255,255,255,0.7);
+  margin:5px;
+}
+a:hover{
+  background:rgba(0,0,0,0.7);
+  color:white;
+  box-shadow:-5px 0 0 rgba(0,0,0,0.7),5px 0 0 rgba(0,0,0,0.7);
+}
+
+
+<script>
+
+</script>
+
+</style>
+
+<html>
+  <body>
+  <div class="main">
+	
+		<div class="navigationBar">
+		
+				<img src="images/Logo.png" alt="Logo" id="TheLogo"> 
+			
+				 
+				 <a href="Contact.html">Contact us</a>
+				 <a href="Models.html">Models</a>
+				 <a href="Home.html">Home</a>
+		
+		</div>
+		
+    <div class="box header">
+	<div class="welcoming">
+      <div class="text">
+        <h1>WELCOME TO <span class="largefont">BEST </span>CAR DEALER IN TOWN!</h1>
+      </div>
+    </div>
+    <div class="content">
+	<ul>
+     <li>FAST DELIVARY</li> <br>
+<li>BOOK YOUR TESTDRIVE BY ONE CLICK</li><br>
+<li>THE BEST POSTSERVICE IN THE TOWN,AND FREE INSURANCE IN ALL CARS</li><br>
+    </ul>
+	</div>
+    <div class="box yet-again">
+      <div class="text">
+        <h1>WHAT <span class="largefont">YOU NEED</span> IS EASY FOR US.</h1>
+        <p>thank you</p>
+      </div>
+    </div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<style>
+.main
+{
+background:url(images/cover.jpg)  no-repeat center center fixed; 
+background-size:cover;
+height:150vh;
+
+
+}
+#Camry,#Fusion,#K5
+{
+display:none;
+
+}
+.InfoIcon{
+display:flex;
+position:absolute;
+bottom:50px;
+}
+.InfoIcon p{
+color:#3492eb;
+font-family:Fantasy;
+}
+.CarInfoText
+{
+max-width:500px;
+margin-top:100px;
+margin-left:70px;
+}
+.CarInfoText h1
+{
+font-size:65px;
+}
+.CarInfoText p{
+max-width:450px;
+font-size:18px;
+font-weight:270;
+line-height:20px;
+margin: 40px 0;
+}
+.InfoIcon div
+{
+display:flex;
+align-items:center;
+margin-right:60px;
+}
+.InfoIcon img{
+width:50px;
+height:50px;
+}
+#CamryPic,#FusionPic,#K5Pic
+{
+width:55%;
+position:absolute;
+right:70px;
+bottom:60px;
+}
+</style>
+<script>
+function passValues(n)
+{
+if(n==1)
+{
+var TheColor=document.getElementById("ColorsCamry").value;
+var TheBrand=document.getElementById("Camry").getAttribute("value");
+var ThePrice=document.getElementById("CamryPrice").getAttribute("value");
+}
+else if(n==2)
+{
+var TheColor=document.getElementById("ColorsFusion").value;
+var TheBrand=document.getElementById("Fusion").getAttribute("value");
+var ThePrice=document.getElementById("FusionPrice").getAttribute("value");
+}
+else if(n==3)
+{
+var TheColor=document.getElementById("ColorsK5").value;
+var TheBrand=document.getElementById("K5").getAttribute("value");
+var ThePrice=document.getElementById("K5Price").getAttribute("value");
+}
+ 
+localStorage.setItem("Colors",TheColor);
+localStorage.setItem("Brands",TheBrand);
+localStorage.setItem("Prices",ThePrice);
+return false;
+}
+function HideAndShow(m) {
+  var x = document.getElementById("BigContainer");
+  if(m==1)
+  {
+  var y=document.getElementById("K5");
+  }
+  else if(m==2)
+  {
+  var y=document.getElementById("Camry");
+  }
+  else if(m==3)
+  {
+  var y=document.getElementById("Fusion");
+  }
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  y.style.display = "block";
+}
+
+  function showDivs(Color,Brand,x) {
+	  var Brand=document.getElementById(Brand);
+	  var Color=document.getElementById(Color);
+	  var temp=x;
+	  var imgg=document.getElementById(x);
+	  var textBrand=Brand.value;
+	  var textColor=Color.value;
+	  var dirr="images/";
+	  imgg.src = dirr+textBrand+textColor +'.png'
+}
+
+</script
+<html>
+
+<head>
+<link rel="stylesheet" href="StyleProject.css">
+</head>
+
+<body>
+
+<div class="main">
+	
+	
+		<div class="navigationBar">
+		
+				<img src="images/Logo.png" alt="Logo" id="TheLogo"> 
+			
+				 
+				 <a href="#Contact">Contact us</a>
+				 <a href="Models.html">Models</a>
+				 <a href="Home.html">Home</a>
+		
+		</div>
+	
+
+<table id="BigContainer">
+<tr>
+
+<td>
+<div class="Container" name="Container" value="K5" >
+<img src="images/K5Black.png" alt="K5Pic" onclick="HideAndShow(1)">
+<div class="Caption">Kia K5</div>
+</div>
+</td>
+ <td>
+<div class="Container" name="Container" value="Camry">
+<img src="images/CamryBlack.png" alt="CamryPic" onclick="HideAndShow(2)">
+<div class="Caption">Toyota Camry</div>
+</div>
+</td>
+ <td>
+<div class="Container" name="Container" value="Fusion">
+<img src="images/FusionBlack.png" alt="FusionPic" onclick="HideAndShow(3)">
+<div class="Caption">Ford Fusion</div>
+</div>
+</td>
+</tr>
+ <td>
+
+</tr>
+
+<div class="K5" id="K5" value="Kia-K5">
+
+<div class="CarInfoText">
+<h1>Kia K5</h1>
+<p>
+The all new K5 will make you fall in love with driving again. With its driver-oriented cockpit, advanced technology, turbocharged engines, stability enhancing wide-track suspension.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/K5Black.png" id="K5Pic" name="K5Pic" alt="K5Pic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>180 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="horsepower"><p>190 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="horsepower"><p>210 km/h </p> </div>
+<div id="K5Price" value="$23,490"> <img src="images/price-icon.png" id="price-icon" alt="horsepower"><p>$23,490 </p> </div>
+
+
+<select id="ColorsK5" name="ColorsK5" >
+<option value="">Color</option>
+<option value="Black">Black</option>
+<option value="Red">Red</option>
+<option value="Blue">Blue</option>
+</select>
+<button type="button" id="BrandK5" name="BrandK5" value="K5" onclick="showDivs('ColorsK5',this.id,'K5Pic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(3)" />
+</form>
+</div>
+</div>
+
+<div class="Camry" id="Camry" value="Toyota-Camry">
+
+<div class="CarInfoText">
+<h1>Toyota Camry</h1>
+<p>
+The Toyota Camry sits near the top of our midsize car rankings. It boasts a generous list of standard safety tech, straightforward infotainment controls, a gentle ride, sharp steering, and a potent engine option.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/CamryBlack.png" id="CamryPic" name="CamryPic" alt="CamryPic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>203 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="horsepower"><p>184 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="horsepower"><p>200 km/h </p> </div>
+<div id="CamryPrice" value="$24,595"> <img src="images/price-icon.png" id="price-icon" alt="horsepower"><p>$24,595 </p> </div>
+
+
+<select id="ColorsCamry" name="ColorsCamry" >
+<option value="">Color</option>
+<option value="White">White</option>
+<option value="Red">Red</option>
+<option value="Black">Black</option>
+
+</select>
+
+<button type="button" id="BrandCamry" name="BrandCamry" value="Camry" onclick="showDivs('ColorsCamry',this.id,'CamryPic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(1)" />
+</form>
+</div>
+</div>
+
+
+<div class="Fusion" id="Fusion" value="Ford-Fusion">
+
+<div class="CarInfoText">
+<h1>Ford Fusion </h1>
+<p>
+The Ford Fusion places in the middle of our midsize car rankings. It delivers solid performance and has a spacious interior, but it lags behind the competition in key areas like fuel economy.
+</p>
+</div>
+
+<img class="ThePictures"  src="images/FusionBlack.png" id="FusionPic" name="FusionPic" alt="FusionPic">
+
+<div class="InfoIcon">
+
+<div> <img src="images/horsepower-icon.png" id="horsepower-icon" alt="horsepower"><p>181 hp</p> </div>
+<div> <img src="images/torque-icon.png" id="torque-icon" alt="horsepower"><p>185 lb·ft</p> </div>
+<div> <img src="images/speed-icon.png" id="speed-icon" alt="horsepower"><p>204 km/h </p> </div>
+<div id="FusionPrice" value="$23,100"> <img src="images/price-icon.png" id="price-icon" alt="horsepower"><p>$23,100 </p> </div>
+
+
+<select id="ColorsFusion" name="ColorsFusion" >
+<option value="">Color</option>
+<option value="Blue">Blue</option>
+<option value="Black">Black</option>
+<option value="Red">Red</option>
+
+</select>
+<button type="button" id="BrandsFusion" name="BrandsFusion" value="Fusion" onclick="showDivs('ColorsFusion',this.id,'FusionPic')" >Preview</button>
+<form action="order.html">
+<input type="submit" value="Click" onclick="passValues(2)" />
+</form>
+</div>
+</div>
+
+
+
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+* {
+box-sizing: border-box;
+ margin:0;
+    padding:0;
+}
+body {font-family: Verdana, sans-serif;}
+
+
+
+
+.navigationBar
+{
+height:70px;
+width:100%;
+background-color:rgba(0, 0, 0,0.0);
+}
+
+#TheLogo
+{
+height:80px;
+padding:10px 80px;
+}
+.navigationBar a {
+  color: white;
+  float:right;
+  padding: 23.9px 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+
+}
+.navigationBar a:hover 
+{
+color: black;
+}
+table
+{
+margin-top:40px;
+width:100%;
+box-sizing: border-box;
+}
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.4);
+  }
+  100% {
+     box-shadow: 0 0 0 20px rgba(0,0,0,0);
+  }
+}
+table img{
+height:200px;
+width:auto;
+animation: animated-border 1.5s infinite;
+font-family: Arial;
+font-size: 18px;
+line-height: 30px;
+font-weight: bold;
+color: black;
+border-radius: 10px;
+padding: 15px;
+}
+.Caption
+{
+opacity:0;
+position: absolute; 
+bottom: 0;
+background: rgba(0, 0, 0, 0.5);
+color: blue; 
+width: 100%;
+transition: .8s ease;
+color: white;
+font-size: 20px;
+text-align: center;
+}
+.Container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  
+
+}
+.Container {
+  margin: 50px;
+  text-align:center;
+}
+  
+
+table img:hover
+{
+height:240px;
+}
+
+.Container:hover .Caption{
+
+opacity:1;
+}
+
+
